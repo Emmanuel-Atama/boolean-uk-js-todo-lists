@@ -1,9 +1,17 @@
-/* 
-The users and todos variables have all the data for you to work with
-Check your console to see the result of the following console.logs, 
-and inspect the data
-*/
+// Create an alert that lists all users, with their ids, names and what city they're from
+console.log(users);
+let userInfo = "";
 
-console.log("users: ", users);
+for (let i = 0; i < users.length; i++) {
+  const id = users[i].id;
+  const name = users[i].name;
+  const city = users[i].address.city;
 
-console.log("todos: ", todos);
+  const row = `${id} | ${name} | ${city}\n`;
+
+  userInfo = userInfo + row;
+
+  console.log(userInfo);
+}
+alert(userInfo);
+
