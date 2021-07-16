@@ -1,32 +1,43 @@
 // Create an alert that lists all users, with their ids, names and what city they're from
-console.log(users);
-let userInfo = "";
+console.log(users)
+let userInfo = ""
 
 for (let i = 0; i < users.length; i++) {
-  const id = users[i].id;
-  const name = users[i].name;
-  const city = users[i].address.city;
+  const id = users[i].id
+  const name = users[i].name
+  const city = users[i].address.city
 
   const row = `${id} | ${name} | ${city}\n`;
 
-  userInfo = userInfo + row;
+  userInfo = userInfo + row
 
-  console.log(userInfo);
+  console.log(userInfo)
 }
 alert(userInfo);
-
-// Prompt the user for a user id
-prompt("Who's list do you want to view? (Use ID)");
-let userId = 0;
-//Alert user
-for (let i = 0; i < todos.length; i++) {
-const userIdRequest = todos[i];
-  // console.log(userIdRequest);
-  // console.log("Index :", i)
-  if (userIdRequest === userId) {
-    userId = todos[i].id;
-  }
+// Prompt user for a username using users
+const selectedUserId = prompt("Who's ID number do you want to view?")
+let usernames =""
+for (let i = 0; i < users.length; i++) {
+const username = users[i].username
+const rowUsername = username + `\n`
+usernames = usernames + rowUsername
 }
-prompt("Choose ID number between 1 - 10");
-alert(userId)
-console.log(userId);
+
+
+// Prompt user for a user title using todos
+
+let userIdentity = ""
+for (let i = 0; i < todos.length; i++) {
+const title = todos[i].title;
+const userId = todos[i].userId;
+const rowTitle = `${userId}\n ${title}\n`;
+if (parseInt(users.Id===selectedUserId)){
+  userIdentity = userIdentity + rowTitle;
+  console.log(userIdentity);
+}
+}
+
+
+// \link both thr username and title together
+const usernameAndTitle = usernames + userIdentity;
+alert (usernameAndTitle);
