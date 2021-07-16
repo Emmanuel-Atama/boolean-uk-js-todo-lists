@@ -20,12 +20,13 @@ prompt("Who's list do you want to view? (Use ID)");
 let userId = 0;
 //Alert user
 for (let i = 0; i < todos.length; i++) {
-const userIdRequest = todos[i].userId;
+const userIdRequest = todos[i];
   // console.log(userIdRequest);
   // console.log("Index :", i)
   if (userIdRequest === userId) {
-    userId = users[i].id;
+    userId = todos[i].id;
   }
 }
-alert("Choose ID number between 1 - 10", +userId);
+prompt("Choose ID number between 1 - 10");
+alert(userId)
 console.log(userId);
