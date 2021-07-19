@@ -28,12 +28,9 @@ usernames = usernames + rowUsername
 
 let userIdentity = ""
 for (let i = 0; i < todos.length; i++) {
-const title = todos[i].title;
-const userId = todos[i].userId;
-const rowTitle = `${userId}\n ${title}\n`;
-if (parseInt(users.Id===selectedUserId)){
-  userIdentity = userIdentity + rowTitle;
-  console.log(userIdentity);
+const title = todos[i]
+if (parseInt(title.id===selectedUserId.id)){
+  userIdentity.push(title)
 }
 }
 
